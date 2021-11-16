@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <androidx.appcompat.widget.Toolbar
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="#fe5141"
+       android:id="@+id/toolbar"
+       >
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_margin="5dp">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="News app"
+               android:textColor="@color/white"
+               android:textSize="20dp">
+
+           </TextView>
+       </RelativeLayout>
+   </androidx.appcompat.widget.Toolbar>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/tab_layout"
+        app:tabSelectedTextColor="@color/white"
+        app:tabMode="scrollable"
+        android:background="#fd5a40"
+        app:tabIndicatorColor="@color/black"
+        app:tabTextColor="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout"
+        android:id="@+id/viewpager"
+        android:background="@color/white"
+        >
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

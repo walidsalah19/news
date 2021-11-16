@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/main_head"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Header" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="6"
+                    android:id="@+id/content"
+                    android:padding="5dp"
+                    android:visibility="invisible"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:text="content"
+                    android:ellipsize="end"
+                    android:layout_weight="1">
+                </TextView>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="331dp"
+                android:layout_height="158dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:id="@+id/auther"
+                android:text="auther"
+                android:padding="5dp"
+                android:ellipsize="end"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:id="@+id/time"
+                android:text="time"
+                android:ellipsize="end"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
